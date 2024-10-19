@@ -4,7 +4,14 @@ var Mypet = {
 
   a: true,
    feed: function () {
-        alert("your pet has been feed")
+    if(Mypet.petHungry > 0 && Mypet.petHungry < 100) {
+        Mypet.petHungry = Mypet.petHungry - 20;
+        alert("your pet has been feed and now the hungry level is " + Mypet.petHungry)
+    }
+    else  {
+        alert("hungry level should not be less than 0 and greater than 100");
+    }
+   
        },
     play:   function() {
         alert("your pet happiness has increased")
